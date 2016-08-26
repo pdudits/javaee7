@@ -57,15 +57,44 @@
 <p>For managing of database schema I recommend <a href="https://flywaydb.org/">FlyWay</a>.</p>
 
 <h2>
+<a id="security" class="anchor" href="#security" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Security</h2>
+
+<p>Ultimate source on JAAS and JASPIC is <a href="http://arjan-tijms.omnifaces.org/">Arjan Tijms</a> (and also for JSF and OmniFaces).</p>
+
+<h2>
+<a id="transactions" class="anchor" href="#transactions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Transactions</h2>
+
+<p>To understand cases, where distributed transactions are not a good choice, read <a href="http://www.enterpriseintegrationpatterns.com/docs/IEEE_Software_Design_2PC.pdf">Your Coffee Shop Doesn’t
+Use Two-Phase Commit</a> by Gregor Hohpe.</p>
+
+<p>Also good source for understanding distributed systems, that usually reach outside scope of Java EE, look at <a href="http://book.mixu.net/distsys/single-page.html">Distributed Systems for Fun and Profit</a> by Mikito Takada.</p>
+
+<h2>
+<a id="messaging" class="anchor" href="#messaging" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Messaging</h2>
+
+<p>Even though Java Serialization is very comfortable, for high performance systems consider <a href="https://github.com/eishay/jvm-serializers/wiki">other serialization libraries</a> that might give you smaller payloads, less CPU usage, and better interface evolution options.</p>
+
+<p>For building business processes based on message passing you may want to read <a href="https://books.google.sk/books/about/Enterprise_Integration_Patterns.html?id=qqB7nrrna_sC&amp;source=kp_cover&amp;redir_esc=y">Enterprise Integration Patterns</a> by Gregor Hohpe (yes, the one of the coffee shop article).</p>
+
+<h2>
+<a id="rest" class="anchor" href="#rest" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>REST</h2>
+
+<p>The origin of the term is in <a href="https://www.ics.uci.edu/%7Efielding/pubs/dissertation/fielding_dissertation.pdf">Roy Fieldings' disertation</a>, where it says it's not just about HTTP, but also <a href="http://olivergierke.de/2016/04/benefits-of-hypermedia/">about hypermedia</a>.</p>
+
+<h2>
+<a id="jsf" class="anchor" href="#jsf" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>JSF</h2>
+
+<p>I think no JSF app can survive without <a href="http://www.primefaces.org/">PrimeFaces</a> and <a href="http://showcase.omnifaces.org/">OmniFaces</a>. And the <a href="https://www.amazon.com/dp/1908689293">book explaining OmniFaces and therefore JSF</a>.</p>
+
+<h2>
 <a id="application-servers" class="anchor" href="#application-servers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Application Servers</h2>
 
 <ul>
 <li>
-<a href="http://www.payara.fish/">Payara</a> - maintained fork of deceased platform reference implementation <a href="https://glassfish.java.net/">Glassfish</a>
+<a href="http://www.payara.fish/">Payara</a> - maintained fork of deceased platform reference implementation <a href="https://glassfish.java.net/">Glassfish</a>. See also (Glassfish Documentation)[<a href="http://docs.oracle.com/cd/E26576_01/index.htm">http://docs.oracle.com/cd/E26576_01/index.htm</a>] and <a href="https://payara.gitbooks.io/payara-server/content">Payara Documentation</a>
 </li>
 <li>
-<a href="http://wildfly.org/">Wildfly</a> - open source variant of <a href="http://developers.redhat.com/products/eap/download/">JBoss EAP 7</a>
-</li>
+<a href="http://wildfly.org/">Wildfly</a> - open source variant of <a href="http://developers.redhat.com/products/eap/download/">JBoss EAP 7</a>. See also <a href="https://docs.jboss.org/author/display/WFLY10/Developer+Guide">Development guide</a> for server specifics.</li>
 <li>
 <a href="http://tomee.apache.org/apache-tomee.html">TomEE</a> Java EE <em>6</em> application server built on top of Tomcat from Tomcat maintainers</li>
 <li>
@@ -78,6 +107,11 @@
 <a id="standards-specifications" class="anchor" href="#standards-specifications" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Standards' specifications</h2>
 
 <p>All Java EE specifications are governed by <a href="http://jcp.org">Java Comunity Process</a> as Java Speficication Requests (JSRs). The list of Java EE 7 JSR with links to spec downloads is available <a href="http://www.oracle.com/technetwork/java/javaee/tech/index-jsp-142185.html">at Oracle's site</a></p>
+
+<h2>
+<a id="misc" class="anchor" href="#misc" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Misc</h2>
+
+<p>At heart of every server there is bytecode manipulation library like <a href="http://asm.ow2.org/">ASM</a>. Other good use cases are writing tests, that verify correctness of the code (e. g. security check is invoked in every method).</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/pdudits/javaee7">Java EE 7 Training</a> is maintained by <a href="https://github.com/pdudits">pdudits</a>.</span>
