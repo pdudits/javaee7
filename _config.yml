@@ -1,0 +1,8 @@
+title: Java EE 7 Training
+description: Java EE 7 Training Resources
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-cayman
+
+gems:
+  - jekyll-mentions
